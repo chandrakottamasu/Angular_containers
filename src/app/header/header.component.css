@@ -1,0 +1,22 @@
+
+  .navbar {
+      position:fixed;
+      justify-content: space-between;
+      padding:10px;
+      background-color: #1976d2;
+      color: #fff;
+     
+      
+    }
+   
+  
+    span{ 
+      padding-right: 1rem;
+      
+    }
+    #logos{
+      flex:0 1 auto;
+      color:#fff;
+    }
+    
+    
