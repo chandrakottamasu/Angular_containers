@@ -1,23 +1,19 @@
 .cards{
     display:flex;
     flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    
-    
     
 }
 .card {
-    -webkit-box-flex: 1;
+   
     flex: 1 0 calc(33.33333333% - (10px + 20px));
     min-width: 200px;
-    max-width: 500px;
-    margin: 10px;
+    max-width: 350px;
+    margin: 15px;
     border: 1px solid #ccc;
     margin-top:95px;
 }
 .card img {
-   max-width:100%;
+   width:100%;
 }
 img{
     display: block;
@@ -26,9 +22,7 @@ img{
     padding: 20px;
     font-size: .9em;
 }
-*, :after, :before {
-    box-sizing: inherit;
-}
+
 article {
     display: block;
 }
@@ -36,5 +30,7 @@ div{
     display: block;
 }
 #btn{
+    bottom:0px;
     float:right;
+    
 }
