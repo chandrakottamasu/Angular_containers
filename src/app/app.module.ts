@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AppCardComponent } from './app-card/app-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditCardComponent } from './edit-card/edit-card.component';
+import { CardServiceService } from './card-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LayoutComponent
+    LayoutComponent,
+    AppCardComponent,
+    EditCardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,10 +27,10 @@ import { LayoutComponent } from './layout/layout.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [CardServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,25 @@
+<div class="container">
+
+        <form align="center" [formGroup] = "appCard" (ngSubmit)=onSubmit() class="form">
+   
+            <label>App Card</label>
+           
+            <div class="md-form" style="width:35rem; margin-left:10px;">
+                <label>Image</label>
+                <input type="file" class="form-control" formControlName="image" ><br>
+                
+                <label>Title</label>
+                <input type="text" class="form-control"  formControlName="title">
+               
+                <label>Description</label>
+               <textarea class="md-textarea form-control " rows="5"  type="text" length="120" formControlName="description" mdbCharCounter mdbInput></textarea>        
+               
+              
+               <br>
+               <button type="button" class="btn btn-danger" style="float:right;">Cancel</button>
+               <button type="button" class="btn btn-success" style="float:right;" [disabled]="!appCard.valid" (click)="onSaving()">Save</button>
+            </div>
+        
+        </form> 
+    
+</div> 

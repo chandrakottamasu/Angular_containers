@@ -1,26 +1,31 @@
 .cards{
     display:flex;
     flex-wrap: wrap;
+    align-items: stretch;
     
 }
 .card {
    
     flex: 1 0 calc(33.33333333% - (10px + 20px));
-    min-width: 200px;
-    max-width: 350px;
+    /* min-width: 250px; */
+    width: 350px;
     margin: 15px;
     border: 1px solid #ccc;
     margin-top:95px;
+
 }
+
 .card img {
    width:100%;
 }
 img{
     display: block;
+    height:200px;
 }
 .card-body {
     padding: 20px;
     font-size: .9em;
+    height:200px;
 }
 
 article {
@@ -33,4 +38,11 @@ div{
     bottom:0px;
     float:right;
     
+}
+#matId{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    font-size:35px;
+    color:#659cf1;
 }

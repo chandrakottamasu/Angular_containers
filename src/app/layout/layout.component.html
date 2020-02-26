@@ -1,57 +1,23 @@
 <div class="cards">
+  <div *ngFor="let data of a">
     <article class="card">
-        <img src="assets/img/css-example.png" alt="CSS examples">
-        <div class="card-body">
-          <h2>CSS Examples</h2>
-          <p>Loads of copy &amp; paste code examples. Includes backgrounds, borders, colors, gradients, CSS grid, flexbox, animations, and more.</p>
-          <button id="btn" >Learn More</button>
+      <!-- <img *ngif="validImage" src="{{data.image}}" alt="...">
+      <img *ngif="!validImage" src="./app/assets/img/angular_icon.svg" alt="..."> -->
+      <img src="{{data.image}}" onerror="this.src='assets/img/css-example.png';" >
+      <div class="card-body">
+        <div class="body_content">
+          <h2>{{data.title}}</h2>
+          <p>{{data.description}}</p>
         </div>
+          <div class="card-footer">
+            <button class="btn btn-success" id="btn" >Learn More</button>
+          </div>
+        </div>
+       
     </article>
-    <article class="card">
-        <img src="assets/img/css_reference.jpeg" alt="CSS reference">
-        <div class="card-body">
-          <h2>CSS Reference</h2>
-          <p>CSS properties, functions, @-rules, data types, color values, and more — all on one page. Filter by keyword.</p>
-        <button id="btn">Learn More</button>
-        </div>
-      
-    </article>
-    <article class="card">
-     
-        <img src="assets/img/grid.png" alt="Grid tutorial">
-        <div class="card-body">
-          <h2>Grid Layout Tutorial</h2>
-          <p>CSS grid layout will soon be an essential skill for any front-end developer's toolkit. Check it out and see all the fuss is about.</p>
-          <button id="btn" >Learn More</button>
-        </div>
-      
-    </article>
-    <!-- <article class="card">
-     
-        <img src="assets/img/flexbox.png" alt="Flexbox tutorial">
-        <div class="card-body">
-          <h2>Flexbox Tutorial</h2>
-          <p>Learn how to create flexible layouts and widgets without having to resort to floats and clearfixes! </p>
-        </div>
-      
-    </article>
-    <article class="card">
-     
-        <img src="assets/img/css_tutorial.jpeg" alt="CSS tutorial">
-        <div class="card-body">
-          <h2>CSS Tutorial</h2>
-          <p>CSS is the standard way to style web pages. It allows you to set colors, fonts, widths, heights, margins, padding, and much more.</p>
-        </div>
-     
-    </article>    
-    <article class="card">
-     
-        <img src="assets/img/css-art.jpg" alt="CSS colors">
-        <div class="card-body">
-          <h2>CSS Color</h2>
-          <p>Loads of CSS color resources. Color pickers, color charts, converters, generators. Full reference for color properties and color values.</p>
-        </div>
-   
-    </article> -->
+    
   </div>
+    <a routerLink="/app-card" routerLinkActive="active"><mat-icon id="matId" >add_circle</mat-icon></a>
+  </div>
+  
   
