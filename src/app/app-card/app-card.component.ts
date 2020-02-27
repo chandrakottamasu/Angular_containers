@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CardServiceService } from '../card-service.service';
+
 @Component({
   selector: 'app-app-card',
   templateUrl: './app-card.component.html',
