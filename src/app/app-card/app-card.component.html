@@ -16,8 +16,15 @@
                
               
                <br>
-               <button type="button" class="btn btn-danger" style="float:right;">Cancel</button>
+               <div *ngIf = "mode === 'read'">
+               <button type="button" class="btn btn-danger" style="float:right;" routerLink="/layout" routerLinkActive="Active">Cancel</button>
                <button type="button" class="btn btn-success" style="float:right;" [disabled]="!appCard.valid" (click)="onSaving()">Save</button>
+            </div>
+            <div *ngIf = "mode === 'edit'">
+               <button type="button" class="btn btn-danger" style="float:left;"  (click)="deleteProductData()">Delete</button>
+               <button type="button" class="btn btn-success" style="float:left;" (click)="updateProductData()">Update</button>
+           
+            </div>
             </div>
         
         </form> 

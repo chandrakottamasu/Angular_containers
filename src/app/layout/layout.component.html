@@ -1,20 +1,24 @@
 <div class="cards">
-  <div *ngFor="let data of a">
+  <div *ngFor="let data of a ">
+
     <article class="card">
       <!-- <img *ngif="validImage" src="{{data.image}}" alt="...">
       <img *ngif="!validImage" src="./app/assets/img/angular_icon.svg" alt="..."> -->
+      
       <img src="{{data.image}}" onerror="this.src='assets/img/css-example.png';" >
       <div class="card-body">
         <div class="body_content">
-          <h2>{{data.title}}</h2>
+          <h2>{{data.title}}{{data.id}}</h2>
           <p>{{data.description}}</p>
         </div>
           <div class="card-footer">
-            <button class="btn btn-success" id="btn" >Learn More</button>
+           
+            <button class="btn btn-success" id="btn" (click)="redirectTo(data)">Learn More</button>
           </div>
         </div>
        
     </article>
+
     
   </div>
     <a routerLink="/app-card" routerLinkActive="active"><mat-icon id="matId" >add_circle</mat-icon></a>
