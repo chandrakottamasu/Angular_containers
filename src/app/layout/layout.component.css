@@ -11,7 +11,7 @@
     width: 350px;
     margin: 15px;
     border: 1px solid #ccc;
-    margin-top:95px;
+    /* margin-top:95px; */
 
 }
 
@@ -45,4 +45,8 @@ div{
     right:20px;
     font-size:35px;
     color:#659cf1;
+}
+.container{
+    margin-top:95px;
+    width:100%;
 }

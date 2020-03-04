@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LayoutComponent implements OnInit {
   a=[];
+  searchText:string;
  
   constructor(private service:CardServiceService,private router:Router,private route:ActivatedRoute) { 
     

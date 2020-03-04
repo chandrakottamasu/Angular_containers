@@ -1,5 +1,12 @@
+
+
 <div class="cards">
-  <div *ngFor="let data of a ">
+   
+  <div class ="container">
+    Search:<input type="text" placeholder="Search Title" [(ngModel)]="searchText"/>
+    <br/>
+  </div>
+  <div *ngFor="let data of a | cardFilter:searchText ">
 
     <article class="card">
       <!-- <img *ngif="validImage" src="{{data.image}}" alt="...">
@@ -24,4 +31,4 @@
     <a routerLink="/app-card" routerLinkActive="active"><mat-icon id="matId" >add_circle</mat-icon></a>
   </div>
   
-  
+

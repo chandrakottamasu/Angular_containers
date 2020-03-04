@@ -9,9 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AppCardComponent } from './app-card/app-card.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { EditCardComponent } from './edit-card/edit-card.component';
 import { CardServiceService } from './card-service.service';
+import { CardFilterPipe } from './card-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardServiceService } from './card-service.service';
     HeaderComponent,
     LayoutComponent,
     AppCardComponent,
-    EditCardComponent
+    EditCardComponent,
+    CardFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { CardServiceService } from './card-service.service';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    BrowserAnimationsModule,ReactiveFormsModule
+    BrowserAnimationsModule,ReactiveFormsModule,FormsModule
     
   ],
   providers: [CardServiceService],
