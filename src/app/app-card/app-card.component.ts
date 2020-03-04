@@ -57,11 +57,11 @@ export class AppCardComponent implements OnInit {
   }
   }
 
-  updateProductData(id:number){
-  
-    this.updatedData = this.appCard.value;
-    this.updatedData.id  = this.service.updatedIndex(this.userData.id);
-    this.service.update(this.updatedData);
+  updateProductData(){
+    const index = this.service.dynamicCard.findIndex(e=>e.id === this.id);
+    
+    this.service.dynamicCard[index]=this.appCard.value;
+    this.service.dynamicCard[index].id=this.id;
      this.router.navigate(['/layout']);
     
   

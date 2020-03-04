@@ -27,17 +27,8 @@ export class CardServiceService {
     return this.dynamicCard.find(e=> e.id === id);
   }
 
-  updatedIndex(id:number)
-  {
-    const index = this.dynamicCard.findIndex(e=> e.id === id);
-    return index;
-  }
-  update(values)
-  {    
-    const index = values.id;
-    return this.dynamicCard[index]=values;;
-    
-  }
+  
+ 
 
   deleteProduct(id:number)
   {
