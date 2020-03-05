@@ -38,6 +38,11 @@ export class AppCardComponent implements OnInit {
     if(this.mode == 'edit'){
     this.route.paramMap.subscribe(data=>{
       this.id = +data.get('id');
+      
+      if(this.service.dynamicCard.findIndex(e=>e.id === this.id) == -1)
+      {
+        this.router.navigate(['/layout']);
+      }
     this.getData(this.id);    
   });
 }

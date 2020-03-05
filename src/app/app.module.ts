@@ -10,18 +10,15 @@ import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AppCardComponent } from './app-card/app-card.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { EditCardComponent } from './edit-card/edit-card.component';
 import { CardServiceService } from './card-service.service';
-import { CardFilterPipe } from './card-filter.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LayoutComponent,
-    AppCardComponent,
-    EditCardComponent,
-    CardFilterPipe
+    AppCardComponent
   ],
   imports: [
     BrowserModule,

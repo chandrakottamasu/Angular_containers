@@ -6,11 +6,10 @@
     Search:<input type="text" placeholder="Search Title" [(ngModel)]="searchText"/>
     <br/>
   </div>
-  <div *ngFor="let data of a | cardFilter:searchText ">
+  <div style="margin-left:30px;" *ngIf="!hasData()">No Data Found</div>
+  <div *ngFor="let data of filteredList ">
 
     <article class="card">
-      <!-- <img *ngif="validImage" src="{{data.image}}" alt="...">
-      <img *ngif="!validImage" src="./app/assets/img/angular_icon.svg" alt="..."> -->
       
       <img src="{{data.image}}" onerror="this.src='assets/img/css-example.png';" >
       <div class="card-body">
